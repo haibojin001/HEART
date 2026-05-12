@@ -1,0 +1,270 @@
+{
+  "model": "anthropic",
+  "timestamp": "20260417_161605",
+  "summary": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0,
+    "errored": 0
+  },
+  "results": [
+    {
+      "tool": "get_user_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_7340"
+        },
+        "id": "toolu_01JrhFi73CfX5UtL2tMeLK6C"
+      }
+    },
+    {
+      "tool": "get_reservation_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_reservation_details",
+        "input": {
+          "reservation_id": "Q69X3R"
+        },
+        "id": "toolu_017S2BAjMAogcN4x7XVRsiYw"
+      }
+    },
+    {
+      "tool": "list_all_airports",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "list_all_airports",
+        "input": {},
+        "id": "toolu_01EdDUBoD9HfcteXZFs4yqMm"
+      }
+    },
+    {
+      "tool": "search_direct_flight",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "search_direct_flight",
+        "input": {
+          "origin": "PHL",
+          "destination": "LGA",
+          "date": "2024-05-16"
+        },
+        "id": "toolu_015NCbFJb7tWU35DXQHaUs1d"
+      }
+    },
+    {
+      "tool": "search_onestop_flight",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "search_onestop_flight",
+        "input": {
+          "origin": "PHL",
+          "destination": "PHX",
+          "date": "2024-05-16"
+        },
+        "id": "toolu_01ANqiKfi1Z3bWVeBbQ6BxCM"
+      }
+    },
+    {
+      "tool": "get_flight_status",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_flight_status",
+        "input": {
+          "flight_number": "HAT243",
+          "date": "2024-05-20"
+        },
+        "id": "toolu_018cZQKHxC1f7bBUj3yCN9KY"
+      }
+    },
+    {
+      "tool": "calculate",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "calculate",
+        "input": {
+          "expression": "(450 + 162 + 166) * 1.1"
+        },
+        "id": "toolu_01PrVurRKTKZWH54CK711hhv"
+      }
+    },
+    {
+      "tool": "transfer_to_human_agents",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "transfer_to_human_agents",
+        "input": {
+          "summary": "User raj_sanchez_7340 is requesting to speak with a human agent immediately regarding a complex unresolvable issue with their reservation."
+        },
+        "id": "toolu_01JAifwhDifeDA9cUNUYdtM1"
+      }
+    },
+    {
+      "tool": "book_reservation",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "book_reservation",
+        "input": {
+          "user_id": "mia_li_3668",
+          "origin": "PHL",
+          "destination": "LGA",
+          "flight_type": "one_way",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-17"
+            }
+          ],
+          "passengers": [
+            {
+              "first_name": "Amelia",
+              "last_name": "Ahmed",
+              "dob": "1957-03-21"
+            }
+          ],
+          "payment_methods": [
+            {
+              "payment_id": "credit_card_4421486",
+              "amount": 189
+            }
+          ],
+          "total_baggages": 0,
+          "nonfree_baggages": 0,
+          "insurance": "no"
+        },
+        "id": "toolu_016Ng7gKZshMHUMwogZoxrpU"
+      }
+    },
+    {
+      "tool": "cancel_reservation",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "cancel_reservation",
+        "input": {
+          "reservation_id": "MZDDS4"
+        },
+        "id": "toolu_016FsiMDycdGr3GxXeiEXLd2"
+      }
+    },
+    {
+      "tool": "update_reservation_baggages",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "update_reservation_baggages",
+        "input": {
+          "reservation_id": "4WQ150",
+          "total_baggages": 6,
+          "nonfree_baggages": 1,
+          "payment_id": "gift_card_3576581"
+        },
+        "id": "toolu_017hz3WkJBsN9pm4yqQvN7QL"
+      }
+    },
+    {
+      "tool": "update_reservation_flights",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "update_reservation_flights",
+        "input": {
+          "reservation_id": "Q69X3R",
+          "cabin": "economy",
+          "flights": [
+            {
+              "flight_number": "HAT001",
+              "date": "2024-05-17"
+            },
+            {
+              "flight_number": "HAT206",
+              "date": "2024-05-23"
+            }
+          ],
+          "payment_id": "gift_card_4964153"
+        },
+        "id": "toolu_01WoETJQ3paPgrgJoC8uyQZS"
+      }
+    },
+    {
+      "tool": "update_reservation_passengers",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "update_reservation_passengers",
+        "input": {
+          "reservation_id": "4WQ150",
+          "passengers": [
+            {
+              "first_name": "Chen",
+              "last_name": "Jackson",
+              "dob": "1956-07-07"
+            },
+            {
+              "first_name": "Raj",
+              "last_name": "Smith",
+              "dob": "1967-04-02"
+            },
+            {
+              "first_name": "Fatima",
+              "last_name": "Martin",
+              "dob": "1970-01-20"
+            }
+          ]
+        },
+        "id": "toolu_01H7rR1cVWNMFLp4iXUoicoe"
+      }
+    },
+    {
+      "tool": "send_certificate",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "send_certificate",
+        "input": {
+          "user_id": "raj_sanchez_7340",
+          "amount": 100
+        },
+        "id": "toolu_01NBUWBUakeUJUPrh6qcd2aB"
+      }
+    }
+  ]
+}

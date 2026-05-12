@@ -1,0 +1,624 @@
+{
+  "model": "anthropic",
+  "timestamp": "20260418_200139",
+  "summary": {
+    "total": 43,
+    "passed": 42,
+    "failed": 1,
+    "errored": 0
+  },
+  "results": [
+    {
+      "tool": "get_customer_by_phone",
+      "group": "agent",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_customer_by_phone",
+        "input": {
+          "phone_number": "555-123-2002"
+        },
+        "id": "toolu_01XjXzaSenTgUYng3u9Vun1L"
+      }
+    },
+    {
+      "tool": "get_customer_by_id",
+      "group": "agent",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_customer_by_id",
+        "input": {
+          "customer_id": "C1001"
+        },
+        "id": "toolu_01U5aGZ55XEJjv4nujACP4L3"
+      }
+    },
+    {
+      "tool": "get_customer_by_name",
+      "group": "agent",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_customer_by_name",
+        "input": {
+          "full_name": "John Smith",
+          "dob": "1985-06-15"
+        },
+        "id": "toolu_01R3nour7xMuaRgYVB2Z2Ef2"
+      }
+    },
+    {
+      "tool": "get_details_by_id",
+      "group": "agent",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_details_by_id",
+        "input": {
+          "id": "L1002"
+        },
+        "id": "toolu_01R7ona7kL1AqPuYBmC1QMYK"
+      }
+    },
+    {
+      "tool": "get_bills_for_customer",
+      "group": "agent",
+      "type": "read",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_customer_by_id', expected 'get_bills_for_customer'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_customer_by_id",
+        "input": {
+          "customer_id": "C1001"
+        },
+        "id": "toolu_01CRKAg9Cmbkk4yuvZ872bK7"
+      }
+    },
+    {
+      "tool": "get_data_usage",
+      "group": "agent",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_data_usage",
+        "input": {
+          "customer_id": "C1001",
+          "line_id": "L1002"
+        },
+        "id": "toolu_01FJ9iHJu8wAwejqBu3FmPxJ"
+      }
+    },
+    {
+      "tool": "suspend_line",
+      "group": "agent",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "suspend_line",
+        "input": {
+          "customer_id": "C1001",
+          "line_id": "L1002",
+          "reason": "lost phone"
+        },
+        "id": "toolu_01MJb4wJoxixDFp3U4Cxoby8"
+      }
+    },
+    {
+      "tool": "resume_line",
+      "group": "agent",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "resume_line",
+        "input": {
+          "customer_id": "C1001",
+          "line_id": "L1002"
+        },
+        "id": "toolu_0189QgaS9Br36ALXT4bWREsi"
+      }
+    },
+    {
+      "tool": "send_payment_request",
+      "group": "agent",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "send_payment_request",
+        "input": {
+          "customer_id": "C1002",
+          "bill_id": "B1005"
+        },
+        "id": "toolu_01JtUyBoup7WLyFwWQoy7Acu"
+      }
+    },
+    {
+      "tool": "enable_roaming",
+      "group": "agent",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "enable_roaming",
+        "input": {
+          "customer_id": "C1001",
+          "line_id": "L1001"
+        },
+        "id": "toolu_01BTjhcJ6axVnBKJ6Yf2bbSA"
+      }
+    },
+    {
+      "tool": "disable_roaming",
+      "group": "agent",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "disable_roaming",
+        "input": {
+          "customer_id": "C1001",
+          "line_id": "L1002"
+        },
+        "id": "toolu_01HrfQ52wwVU7FYdSwaKmy4o"
+      }
+    },
+    {
+      "tool": "refuel_data",
+      "group": "agent",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "refuel_data",
+        "input": {
+          "customer_id": "C1001",
+          "line_id": "L1002",
+          "gb_amount": 2
+        },
+        "id": "toolu_01GipwECM7GSYonwbGMwsrUp"
+      }
+    },
+    {
+      "tool": "transfer_to_human_agents",
+      "group": "agent",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "transfer_to_human_agents",
+        "input": {
+          "summary": "Customer John Smith (ID: C1001, phone: 555-123-2002) is requesting to speak with a human agent regarding a complex billing dispute that cannot be resolved automatically."
+        },
+        "id": "toolu_01Do3sGG41QChs7YT3A9nZ38"
+      }
+    },
+    {
+      "tool": "check_status_bar",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_status_bar",
+        "input": {},
+        "id": "toolu_011q2ok8JWcPcAm7u5K2VkDa"
+      }
+    },
+    {
+      "tool": "check_network_status",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_network_status",
+        "input": {},
+        "id": "toolu_016vGRt1zACKt1252RF3smdM"
+      }
+    },
+    {
+      "tool": "check_network_mode_preference",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_network_mode_preference",
+        "input": {},
+        "id": "toolu_01SYDj7z56uFcUJFaY3HVH6L"
+      }
+    },
+    {
+      "tool": "run_speed_test",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "run_speed_test",
+        "input": {},
+        "id": "toolu_01DN6PHYTMtgsGCRC1GJFBrm"
+      }
+    },
+    {
+      "tool": "check_sim_status",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_sim_status",
+        "input": {},
+        "id": "toolu_0111vpuKL2qCYAhLexoPb4RQ"
+      }
+    },
+    {
+      "tool": "check_data_restriction_status",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_data_restriction_status",
+        "input": {},
+        "id": "toolu_01LdbkUZNgkcMnShQpXjughV"
+      }
+    },
+    {
+      "tool": "check_apn_settings",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_apn_settings",
+        "input": {},
+        "id": "toolu_01J3o5UCMi1v8dCmspfGg53F"
+      }
+    },
+    {
+      "tool": "check_wifi_status",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_wifi_status",
+        "input": {},
+        "id": "toolu_01XVFCUinEMi16yHng7A18oX"
+      }
+    },
+    {
+      "tool": "check_wifi_calling_status",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_wifi_calling_status",
+        "input": {},
+        "id": "toolu_01MG4xFtUiDjKSKrXVNQqW6f"
+      }
+    },
+    {
+      "tool": "check_vpn_status",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_vpn_status",
+        "input": {},
+        "id": "toolu_013QJLakNaUjHn8qjTwF4y3y"
+      }
+    },
+    {
+      "tool": "check_installed_apps",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_installed_apps",
+        "input": {},
+        "id": "toolu_016petk3hZbEFst6zercH2jM"
+      }
+    },
+    {
+      "tool": "check_app_status",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_app_status",
+        "input": {
+          "app_name": "messaging"
+        },
+        "id": "toolu_01RVuvEnVQkHzGk6SK9tWXVm"
+      }
+    },
+    {
+      "tool": "check_app_permissions",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_app_permissions",
+        "input": {
+          "app_name": "messaging"
+        },
+        "id": "toolu_015RThz3Loc9nQdgwPGU3qiC"
+      }
+    },
+    {
+      "tool": "can_send_mms",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "can_send_mms",
+        "input": {},
+        "id": "toolu_01RGW5tqofXzpM5mUTV2P2pM"
+      }
+    },
+    {
+      "tool": "check_payment_request",
+      "group": "user",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "check_payment_request",
+        "input": {},
+        "id": "toolu_01HTVhGjTATD3dwWKrqjoAb1"
+      }
+    },
+    {
+      "tool": "set_network_mode_preference",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "set_network_mode_preference",
+        "input": {
+          "mode": "4g_5g_preferred"
+        },
+        "id": "toolu_01Dbd5ujZwy9B8DaWZTjpo4b"
+      }
+    },
+    {
+      "tool": "toggle_airplane_mode",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "toggle_airplane_mode",
+        "input": {},
+        "id": "toolu_0121BzUXafjLzzgq9PM61orD"
+      }
+    },
+    {
+      "tool": "toggle_data",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "toggle_data",
+        "input": {},
+        "id": "toolu_01LijJs1rgYHYnGRY6u4NLVe"
+      }
+    },
+    {
+      "tool": "toggle_roaming",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "toggle_roaming",
+        "input": {},
+        "id": "toolu_01BaphHnJgmbZnh1ZfTDeEjd"
+      }
+    },
+    {
+      "tool": "toggle_data_saver_mode",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "toggle_data_saver_mode",
+        "input": {},
+        "id": "toolu_013K7vytoC1TmbXXXaq6MpLu"
+      }
+    },
+    {
+      "tool": "reset_apn_settings",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "reset_apn_settings",
+        "input": {},
+        "id": "toolu_011qi8puyNDewtK9Jr3aTwEZ"
+      }
+    },
+    {
+      "tool": "set_apn_settings",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "set_apn_settings",
+        "input": {
+          "apn_settings": {
+            "apn_name": "internet",
+            "mmsc_url": "http://mms.carrier.com/mms/wapenc",
+            "reset_at_reboot": false
+          }
+        },
+        "id": "toolu_012VCdh4ckRX4DsG1XyPXPH4"
+      }
+    },
+    {
+      "tool": "toggle_wifi",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "toggle_wifi",
+        "input": {},
+        "id": "toolu_01DNDhSMKnRQy9fW4jMhQXYC"
+      }
+    },
+    {
+      "tool": "toggle_wifi_calling",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "toggle_wifi_calling",
+        "input": {},
+        "id": "toolu_01EoPEUaUNoHvZ8AUv4c24pd"
+      }
+    },
+    {
+      "tool": "connect_vpn",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "connect_vpn",
+        "input": {},
+        "id": "toolu_01K8XNT2hzkMKgyRaRPS7Xex"
+      }
+    },
+    {
+      "tool": "disconnect_vpn",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "disconnect_vpn",
+        "input": {},
+        "id": "toolu_01TaDdBcK4VWZdiNhmNfxeF2"
+      }
+    },
+    {
+      "tool": "grant_app_permission",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "grant_app_permission",
+        "input": {
+          "app_name": "messaging",
+          "permission": "sms"
+        },
+        "id": "toolu_018zHeQZZbaRroUFu9dTKAph"
+      }
+    },
+    {
+      "tool": "reseat_sim_card",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "reseat_sim_card",
+        "input": {},
+        "id": "toolu_01HMeB6RcQYLMBRdqrdPCvPV"
+      }
+    },
+    {
+      "tool": "reboot_device",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "reboot_device",
+        "input": {},
+        "id": "toolu_01W1U1Skux6yk9r3UiM77AC9"
+      }
+    },
+    {
+      "tool": "make_payment",
+      "group": "user",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "make_payment",
+        "input": {},
+        "id": "toolu_01Cwvi15gtJBkM637EMFwsdA"
+      }
+    }
+  ]
+}
