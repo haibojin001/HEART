@@ -1,0 +1,233 @@
+{
+  "model": "anthropic",
+  "timestamp": "20260417_163008",
+  "summary": {
+    "total": 16,
+    "passed": 7,
+    "failed": 9,
+    "errored": 0
+  },
+  "results": [
+    {
+      "tool": "find_user_id_by_email",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "find_user_id_by_email",
+        "input": {
+          "email": "raj.sanchez2046@example.com"
+        },
+        "id": "toolu_01SqtAK2JJ9c6a72bUyFQjHS"
+      }
+    },
+    {
+      "tool": "find_user_id_by_name_zip",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "find_user_id_by_name_zip",
+        "input": {
+          "first_name": "Raj",
+          "last_name": "Sanchez",
+          "zip": "92147"
+        },
+        "id": "toolu_01HgqMwGUYmPJuJxjfFCK75E"
+      }
+    },
+    {
+      "tool": "get_user_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_2970"
+        },
+        "id": "toolu_01NnjQjGxSXqTztT6x1NaJKc"
+      }
+    },
+    {
+      "tool": "get_order_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_order_details",
+        "input": {
+          "order_id": "#W4566809"
+        },
+        "id": "toolu_01H2C3Rjis5R6psiXfYWUGCb"
+      }
+    },
+    {
+      "tool": "get_product_details",
+      "type": "read",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "get_item_details",
+      "type": "read",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "list_all_product_types",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "list_all_product_types",
+        "input": {},
+        "id": "toolu_01CCZPBeoVs5z8dcHbm7CHx1"
+      }
+    },
+    {
+      "tool": "calculate",
+      "type": "generic",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "transfer_to_human_agents",
+      "type": "generic",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "cancel_pending_order",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "cancel_pending_order",
+        "input": {
+          "order_id": "#W4566809",
+          "reason": "ordered by mistake"
+        },
+        "id": "toolu_01VEuBufHZ5ji6w22C2sH3p3"
+      }
+    },
+    {
+      "tool": "modify_pending_order_address",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_pending_order_address",
+        "input": {
+          "order_id": "#W4566809",
+          "address1": "100 New Street",
+          "address2": "Apt 5",
+          "city": "Los Angeles",
+          "state": "CA",
+          "country": "USA",
+          "zip": "90001"
+        },
+        "id": "toolu_019XCpefax1HSuSMp1bQosxc"
+      }
+    },
+    {
+      "tool": "modify_pending_order_payment",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "modify_pending_order_items",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_item_details', expected 'modify_pending_order_items'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_item_details",
+        "input": {
+          "item_id": "8470360507"
+        },
+        "id": "toolu_01Hg7v4qdNVs7zveu6AJCQGx"
+      }
+    },
+    {
+      "tool": "modify_user_address",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "return_delivered_order_items",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "exchange_delivered_order_items",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_item_details', expected 'exchange_delivered_order_items'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_item_details",
+        "input": {
+          "item_id": "3374679624"
+        },
+        "id": "toolu_01B3tPj2iuURyHFf7KEvQA83"
+      }
+    }
+  ]
+}

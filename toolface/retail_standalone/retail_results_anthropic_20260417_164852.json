@@ -1,0 +1,253 @@
+{
+  "model": "anthropic",
+  "timestamp": "20260417_164852",
+  "summary": {
+    "total": 16,
+    "passed": 14,
+    "failed": 2,
+    "errored": 0
+  },
+  "results": [
+    {
+      "tool": "find_user_id_by_email",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "find_user_id_by_email",
+        "input": {
+          "email": "raj.sanchez2046@example.com"
+        },
+        "id": "toolu_016MdnbE7LuuAX2LnGcVdqVG"
+      }
+    },
+    {
+      "tool": "find_user_id_by_name_zip",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "find_user_id_by_name_zip",
+        "input": {
+          "first_name": "Raj",
+          "last_name": "Sanchez",
+          "zip": "92147"
+        },
+        "id": "toolu_01JKCUjQMcQdkTecEymcKedc"
+      }
+    },
+    {
+      "tool": "get_user_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_2970"
+        },
+        "id": "toolu_01RMNgxzGXf4RVKMoPVBNrZV"
+      }
+    },
+    {
+      "tool": "get_order_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_order_details",
+        "input": {
+          "order_id": "#W4566809"
+        },
+        "id": "toolu_01RJQKJzrLLQoiNfQRXED5hY"
+      }
+    },
+    {
+      "tool": "get_product_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_product_details",
+        "input": {
+          "product_id": "9523456873"
+        },
+        "id": "toolu_014Z4nnWuw8GzuZuoLpAiVvY"
+      }
+    },
+    {
+      "tool": "get_item_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_item_details",
+        "input": {
+          "item_id": "9612497925"
+        },
+        "id": "toolu_01S2Ge8p1N1tkGVtucEn2vpm"
+      }
+    },
+    {
+      "tool": "list_all_product_types",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "list_all_product_types",
+        "input": {},
+        "id": "toolu_01Efq1wce1jz9hmCAvZbwaxF"
+      }
+    },
+    {
+      "tool": "calculate",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "calculate",
+        "input": {
+          "expression": "320.55 + 506.15"
+        },
+        "id": "toolu_01SYnvMDHdnQh5stTgZzfEW9"
+      }
+    },
+    {
+      "tool": "transfer_to_human_agents",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "transfer_to_human_agents",
+        "input": {
+          "summary": "Authenticated user raj_sanchez_2970 (raj.sanchez2046@example.com) has a billing dispute that requires human assistance."
+        },
+        "id": "toolu_01KQhKA7Quc7kQTrfKpZxRi4"
+      }
+    },
+    {
+      "tool": "cancel_pending_order",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "cancel_pending_order",
+        "input": {
+          "order_id": "#W4566809",
+          "reason": "ordered by mistake"
+        },
+        "id": "toolu_01YZqwR2urFV77mxiMxUG61g"
+      }
+    },
+    {
+      "tool": "modify_pending_order_address",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_pending_order_address",
+        "input": {
+          "order_id": "#W4566809",
+          "address1": "100 New Street",
+          "address2": "Apt 5",
+          "city": "Los Angeles",
+          "state": "CA",
+          "country": "USA",
+          "zip": "90001"
+        },
+        "id": "toolu_01KnPTXoRWT5pUwkeuphtTiU"
+      }
+    },
+    {
+      "tool": "modify_pending_order_payment",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_pending_order_payment",
+        "input": {
+          "order_id": "#W1080318",
+          "payment_method_id": "gift_card_3749819"
+        },
+        "id": "toolu_01SvmUteScuurrnww13P8Kpa"
+      }
+    },
+    {
+      "tool": "modify_pending_order_items",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "modify_user_address",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_user_address",
+        "input": {
+          "user_id": "raj_sanchez_2970",
+          "address1": "200 Ocean Ave",
+          "address2": "Unit 3B",
+          "city": "Santa Monica",
+          "state": "CA",
+          "country": "USA",
+          "zip": "90401"
+        },
+        "id": "toolu_01W5gws4gFzw49qok7S2fBDD"
+      }
+    },
+    {
+      "tool": "return_delivered_order_items",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "exchange_delivered_order_items",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "exchange_delivered_order_items",
+        "input": {
+          "order_id": "#W7736708",
+          "item_ids": [
+            "3104857380"
+          ],
+          "new_item_ids": [
+            "3374679624"
+          ],
+          "payment_method_id": "credit_card_3362387"
+        },
+        "id": "toolu_01JuPLYQu9BHrMqxBeC2dRk1"
+      }
+    }
+  ]
+}

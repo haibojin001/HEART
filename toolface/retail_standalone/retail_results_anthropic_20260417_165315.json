@@ -1,0 +1,256 @@
+{
+  "model": "anthropic",
+  "timestamp": "20260417_165315",
+  "summary": {
+    "total": 16,
+    "passed": 14,
+    "failed": 2,
+    "errored": 0
+  },
+  "results": [
+    {
+      "tool": "find_user_id_by_email",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "find_user_id_by_email",
+        "input": {
+          "email": "raj.sanchez2046@example.com"
+        },
+        "id": "toolu_01DXRX8T1objDQB5NaWhCFEm"
+      }
+    },
+    {
+      "tool": "find_user_id_by_name_zip",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "find_user_id_by_name_zip",
+        "input": {
+          "first_name": "Raj",
+          "last_name": "Sanchez",
+          "zip": "92147"
+        },
+        "id": "toolu_01P96pNoBhkYy6Tc2dFDXrw2"
+      }
+    },
+    {
+      "tool": "get_user_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_2970"
+        },
+        "id": "toolu_01KVwEXQM9GZAdEi3im7J5G6"
+      }
+    },
+    {
+      "tool": "get_order_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_order_details",
+        "input": {
+          "order_id": "#W4566809"
+        },
+        "id": "toolu_01KejafWAYRNsoPDyAcjmnDU"
+      }
+    },
+    {
+      "tool": "get_product_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_product_details",
+        "input": {
+          "product_id": "9523456873"
+        },
+        "id": "toolu_01HK8CxYSFeCqSaQeu1BdpS6"
+      }
+    },
+    {
+      "tool": "get_item_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_item_details",
+        "input": {
+          "item_id": "9612497925"
+        },
+        "id": "toolu_01FX4SrsjF9JtNKkSTYyVDAC"
+      }
+    },
+    {
+      "tool": "list_all_product_types",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "list_all_product_types",
+        "input": {},
+        "id": "toolu_01LZFHzEw68CX9EGAp2ZyRSf"
+      }
+    },
+    {
+      "tool": "calculate",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "calculate",
+        "input": {
+          "expression": "320.55 + 506.15"
+        },
+        "id": "toolu_014fMuTxzE7Z1QSWgbCsTPFb"
+      }
+    },
+    {
+      "tool": "transfer_to_human_agents",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "transfer_to_human_agents",
+        "input": {
+          "summary": "Authenticated user raj_sanchez_2970 (raj.sanchez2046@example.com) has a billing dispute that requires human agent assistance."
+        },
+        "id": "toolu_016pKqsZrUhxEdzH9zuSj7rz"
+      }
+    },
+    {
+      "tool": "cancel_pending_order",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "cancel_pending_order",
+        "input": {
+          "order_id": "#W4566809",
+          "reason": "ordered by mistake"
+        },
+        "id": "toolu_01DXCSekxrzfREyDPQYoZ63j"
+      }
+    },
+    {
+      "tool": "modify_pending_order_address",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_pending_order_address",
+        "input": {
+          "order_id": "#W4566809",
+          "address1": "100 New Street",
+          "address2": "Apt 5",
+          "city": "Los Angeles",
+          "state": "CA",
+          "country": "USA",
+          "zip": "90001"
+        },
+        "id": "toolu_01PwMfrnwet5eXvN2j3971De"
+      }
+    },
+    {
+      "tool": "modify_pending_order_payment",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "modify_pending_order_items",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_pending_order_items",
+        "input": {
+          "order_id": "#W4566809",
+          "item_ids": [
+            "1569829406"
+          ],
+          "new_item_ids": [
+            "8470360507"
+          ],
+          "payment_method_id": "credit_card_3362387"
+        },
+        "id": "toolu_014eaTT4oJHRvWuKxhVAk99H"
+      }
+    },
+    {
+      "tool": "modify_user_address",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_user_address",
+        "input": {
+          "user_id": "raj_sanchez_2970",
+          "address1": "200 Ocean Ave",
+          "address2": "Unit 3B",
+          "city": "Santa Monica",
+          "state": "CA",
+          "country": "USA",
+          "zip": "90401"
+        },
+        "id": "toolu_01LyTjpcLcj6zpPmUnLeTGY8"
+      }
+    },
+    {
+      "tool": "return_delivered_order_items",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "return_delivered_order_items",
+        "input": {
+          "order_id": "#W7736708",
+          "item_ids": [
+            "3104857380"
+          ],
+          "payment_method_id": "credit_card_3362387"
+        },
+        "id": "toolu_01XFuma3udU69vVrvyM6Do9t"
+      }
+    },
+    {
+      "tool": "exchange_delivered_order_items",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    }
+  ]
+}

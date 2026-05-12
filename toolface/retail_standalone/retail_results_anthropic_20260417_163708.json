@@ -1,0 +1,242 @@
+{
+  "model": "anthropic",
+  "timestamp": "20260417_163708",
+  "summary": {
+    "total": 16,
+    "passed": 13,
+    "failed": 3,
+    "errored": 0
+  },
+  "results": [
+    {
+      "tool": "find_user_id_by_email",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "find_user_id_by_email",
+        "input": {
+          "email": "raj.sanchez2046@example.com"
+        },
+        "id": "toolu_019xHT2Kp7tiXkSPwFJYECfy"
+      }
+    },
+    {
+      "tool": "find_user_id_by_name_zip",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "find_user_id_by_name_zip",
+        "input": {
+          "first_name": "Raj",
+          "last_name": "Sanchez",
+          "zip": "92147"
+        },
+        "id": "toolu_013gyRqDr7Wj9e5qn4cAnFFz"
+      }
+    },
+    {
+      "tool": "get_user_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_2970"
+        },
+        "id": "toolu_018wgGws9ZpFGhxL3LnDwxCL"
+      }
+    },
+    {
+      "tool": "get_order_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_order_details",
+        "input": {
+          "order_id": "#W4566809"
+        },
+        "id": "toolu_018tBxvdMATAfzhUSytaAz4S"
+      }
+    },
+    {
+      "tool": "get_product_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_product_details",
+        "input": {
+          "product_id": "9523456873"
+        },
+        "id": "toolu_01L311p34Jnewh37fZhtbmxY"
+      }
+    },
+    {
+      "tool": "get_item_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_item_details",
+        "input": {
+          "item_id": "9612497925"
+        },
+        "id": "toolu_01E8YcaiPSqoJTthjTbfWVpY"
+      }
+    },
+    {
+      "tool": "list_all_product_types",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "list_all_product_types",
+        "input": {},
+        "id": "toolu_015qRALyHTtGsvtdLsghT97P"
+      }
+    },
+    {
+      "tool": "calculate",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "calculate",
+        "input": {
+          "expression": "320.55 + 506.15"
+        },
+        "id": "toolu_01C1wt6aMSwQavyo1iznR1PA"
+      }
+    },
+    {
+      "tool": "transfer_to_human_agents",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "transfer_to_human_agents",
+        "input": {
+          "summary": "Authenticated user raj_sanchez_2970 (raj.sanchez2046@example.com) has a billing dispute that requires human assistance."
+        },
+        "id": "toolu_015b42qPpUtUbruJuuQqwwWo"
+      }
+    },
+    {
+      "tool": "cancel_pending_order",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "cancel_pending_order",
+        "input": {
+          "order_id": "#W4566809",
+          "reason": "ordered by mistake"
+        },
+        "id": "toolu_01Tro7hkCby4FLCnWspYTYYf"
+      }
+    },
+    {
+      "tool": "modify_pending_order_address",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_pending_order_address",
+        "input": {
+          "order_id": "#W4566809",
+          "address1": "100 New Street",
+          "address2": "Apt 5",
+          "city": "Los Angeles",
+          "state": "CA",
+          "country": "USA",
+          "zip": "90001"
+        },
+        "id": "toolu_013xZhVaRHvYsUDeJ572LbF5"
+      }
+    },
+    {
+      "tool": "modify_pending_order_payment",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "modify_pending_order_payment",
+        "input": {
+          "order_id": "#W1080318",
+          "payment_method_id": "gift_card_3749819"
+        },
+        "id": "toolu_01Ua3P9PVgxgbhHxswgV84Xx"
+      }
+    },
+    {
+      "tool": "modify_pending_order_items",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "modify_user_address",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    },
+    {
+      "tool": "return_delivered_order_items",
+      "type": "write",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "return_delivered_order_items",
+        "input": {
+          "order_id": "#W7736708",
+          "item_ids": [
+            "3104857380"
+          ],
+          "payment_method_id": "credit_card_3362387"
+        },
+        "id": "toolu_01HJG3uoaHwZ48nMXG2JRgwt"
+      }
+    },
+    {
+      "tool": "exchange_delivered_order_items",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "No tool called (stop: end_turn)"
+      ],
+      "result": {
+        "called": false,
+        "stop_reason": "end_turn"
+      }
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "model": "anthropic",
+  "timestamp": "20260417_160945",
+  "summary": {
+    "total": 14,
+    "passed": 7,
+    "failed": 7,
+    "errored": 0
+  },
+  "results": [
+    {
+      "tool": "get_user_details",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_7340"
+        },
+        "id": "toolu_011WEn1224epCdX1dtko35CA"
+      },
+      "query": "I am raj_sanchez_7340. Can you look up my account details?"
+    },
+    {
+      "tool": "get_reservation_details",
+      "type": "read",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_user_details', expected 'get_reservation_details'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_7340"
+        },
+        "id": "toolu_01JsMSJ4Lu5NPUt8JscQJ3ZQ"
+      },
+      "query": "I am raj_sanchez_7340. What are the details of my reservation Q69X3R?"
+    },
+    {
+      "tool": "list_all_airports",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "list_all_airports",
+        "input": {},
+        "id": "toolu_01D977nzQn6xBYXjTYaTR5am"
+      },
+      "query": "What airports are available in your system?"
+    },
+    {
+      "tool": "search_direct_flight",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "search_direct_flight",
+        "input": {
+          "origin": "PHL",
+          "destination": "LGA",
+          "date": "2024-05-16"
+        },
+        "id": "toolu_018gcvc8HFHptAgkgZwGjqBD"
+      },
+      "query": "Search for direct flights from PHL to LGA on 2024-05-16."
+    },
+    {
+      "tool": "search_onestop_flight",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "search_onestop_flight",
+        "input": {
+          "origin": "PHL",
+          "destination": "PHX",
+          "date": "2024-05-16"
+        },
+        "id": "toolu_01AdTRcsq6TjrvotKgwRrvp8"
+      },
+      "query": "Search for one-stop connecting flights from PHL to PHX on 2024-05-16."
+    },
+    {
+      "tool": "get_flight_status",
+      "type": "read",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "get_flight_status",
+        "input": {
+          "flight_number": "HAT243",
+          "date": "2024-05-20"
+        },
+        "id": "toolu_01694QxHopDVSsD9ETVpeGKz"
+      },
+      "query": "What is the status of flight HAT243 on 2024-05-20?"
+    },
+    {
+      "tool": "calculate",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "calculate",
+        "input": {
+          "expression": "(450 + 162 + 166) * 1.1"
+        },
+        "id": "toolu_012cEUSyKs5MMnnxhuSEcjei"
+      },
+      "query": "Calculate (450 + 162 + 166) * 1.1 for me."
+    },
+    {
+      "tool": "book_reservation",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_user_details', expected 'book_reservation'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "mia_li_3668"
+        },
+        "id": "toolu_018EjeLRvjUe92T43bh3dn7D"
+      },
+      "query": "I am mia_li_3668. Book a one-way economy flight from PHL to LGA on 2024-05-17, flight HAT001. One passenger: Amelia Ahmed, DOB 1957-03-21. Pay $189 with credit_card_4421486. No extra bags, no insurance."
+    },
+    {
+      "tool": "cancel_reservation",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_user_details', expected 'cancel_reservation'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_7340"
+        },
+        "id": "toolu_018KbFe9bHYwaer1GPf9fxqz"
+      },
+      "query": "I am raj_sanchez_7340. I want to cancel reservation MZDDS4. My plans have changed. I confirm I want to proceed."
+    },
+    {
+      "tool": "update_reservation_baggages",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_user_details', expected 'update_reservation_baggages'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "chen_jackson_3290"
+        },
+        "id": "toolu_01TK9W8Qj9oVUHytGHEb7Emv"
+      },
+      "query": "I am chen_jackson_3290. Add 1 non-free checked bag to reservation 4WQ150. Total bags should be 6 (5 existing + 1 new). Charge to gift_card_3576581. I confirm."
+    },
+    {
+      "tool": "update_reservation_flights",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_user_details', expected 'update_reservation_flights'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_7340"
+        },
+        "id": "toolu_01JhXteoP7AJSb4i5iKXrzvK"
+      },
+      "query": "I am raj_sanchez_7340. I want to change the outbound flights on reservation Q69X3R to flight HAT001 on 2024-05-17 (PHL to LGA). Keep the return flight HAT206 on 2024-05-23. Keep economy cabin. Charge any difference to gift_card_4964153. I confirm."
+    },
+    {
+      "tool": "update_reservation_passengers",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_reservation_details', expected 'update_reservation_passengers'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_reservation_details",
+        "input": {
+          "reservation_id": "4WQ150"
+        },
+        "id": "toolu_01G8Ccuizahct839qVGjAcNk"
+      },
+      "query": "I am chen_jackson_3290. Update the passengers on reservation 4WQ150. Keep the same 3 passengers but correct the DOB for Raj Smith to 1967-04-02. Passengers: Chen Jackson (1956-07-07), Raj Smith (1967-04-02), Fatima Martin (1970-01-20). I confirm."
+    },
+    {
+      "tool": "send_certificate",
+      "type": "write",
+      "ok": false,
+      "issues": [
+        "Wrong tool: got 'get_user_details', expected 'send_certificate'"
+      ],
+      "result": {
+        "called": true,
+        "name": "get_user_details",
+        "input": {
+          "user_id": "raj_sanchez_7340"
+        },
+        "id": "toolu_01L96uwdsbXQ4VSwnEwukujA"
+      },
+      "query": "I am raj_sanchez_7340. My flight was cancelled by the airline. Please send me a $100 travel certificate as compensation. I confirm."
+    },
+    {
+      "tool": "transfer_to_human_agents",
+      "type": "generic",
+      "ok": true,
+      "issues": [],
+      "result": {
+        "called": true,
+        "name": "transfer_to_human_agents",
+        "input": {
+          "summary": "User raj_sanchez_7340 is requesting to speak with a human agent regarding a complex issue with their reservation."
+        },
+        "id": "toolu_01Tms4fgJ3ZwEgjS9xxLYbzo"
+      },
+      "query": "I am raj_sanchez_7340. I need to speak with a human agent immediately. I have a complex issue with my reservation that cannot be resolved automatically."
+    }
+  ]
+}
