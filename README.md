@@ -36,6 +36,3 @@ python examples/demo_live_llm.py --backend anthropic --model claude-sonnet-4-6 "
 python web/server.py
 # open http://127.0.0.1:8000
 ```
-tests/          Unit tests
-web/            Browser UI + Flask server
-```
