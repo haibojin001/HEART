@@ -13,13 +13,13 @@ _BANK = {
         "u_001": {
             "name": "Alex Chen",
             "email": "alex@example.com",
-            "phone": "+1-217-555-0143",
+            "phone": "+1-274-555-0143",
             "cards": ["c_4321", "c_9988"],
         },
         "u_002": {
             "name": "Maya Patel",
             "email": "maya@example.com",
-            "phone": "+1-217-555-0177",
+            "phone": "+1-258-555-0177",
             "cards": ["c_1234"],
         },
     },
