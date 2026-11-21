@@ -54,3 +54,7 @@ Endpoints, all returning `{"ok": true, "result": ...}` on success:
 - `POST /tools/<domain>/<tool>` — TAU2/NESTFUL alias for the same dispatch
 - `POST /ace/<tool>` — ACE alias
 
+## License
+
+This project is released under the [MIT License](LICENSE).
+
