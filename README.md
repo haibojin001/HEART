@@ -2,6 +2,11 @@
 
 **HEART: Harness Engineering via Agent-native Reusable Tool primitives**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2609.01736-b31b1b.svg)](https://arxiv.org/abs/2609.01736)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+Code for the paper [*Harness Engineering in LLM Tool Use via Agent-Native Reusable Tool Primitives*](https://arxiv.org/abs/2609.01736).
+
 A multi-agent tool-calling system that decomposes user queries into a plan, retrieves the relevant tools from a centralized **ToolFace** registry, executes each step through a per-tool Tool Primitive, and recovers from failures via feedback-driven re-planning.
 
 The four agents are:
@@ -54,3 +59,22 @@ Endpoints, all returning `{"ok": true, "result": ...}` on success:
 - `POST /tools/<domain>/<tool>` — TAU2/NESTFUL alias for the same dispatch
 - `POST /ace/<tool>` — ACE alias
 
+## Citation
+
+If you use HEART in your research, please cite:
+
+```bibtex
+@misc{jin2026harnessengineeringllmtool,
+      title={Harness Engineering in LLM Tool Use via Agent-Native Reusable Tool Primitives},
+      author={Haibo Jin and Suijin Wang and Xucheng Yu and Haojing Luo and Haohan Wang},
+      year={2026},
+      eprint={2609.01736},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2609.01736},
+}
+```
+
+## License
+
+Released under the [MIT License](LICENSE).
